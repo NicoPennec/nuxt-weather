@@ -5,3 +5,11 @@
     <p>Made with love by <a href="http://pennec.io">NicoPennec</a> 🤓</p>
   </section>
 </template>
+
+<script>
+  export default {
+    head: {
+      title: 'About'
+    }
+  }
+</script>

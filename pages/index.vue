@@ -11,6 +11,9 @@
   export default {
     components: {
       Renderer
+    },
+    head: {
+      title: 'Home'
     }
   }
 </script>
