@@ -24,9 +24,9 @@ export default {
       return error({ message: 'City not found', statusCode: 404 })
     }
 
-    let { data } = await axios.get(`https://www.metaweather.com/api/location/search/?query=${params.citycode}`)
+    let { data } = await axios.get(`/proxy/api/location/search/?query=${params.citycode}`)
     let city = data[0]
-    let { data: weather } = await axios.get(`https://www.metaweather.com/api/location/${city.woeid}/`)
+    let { data: weather } = await axios.get(`/proxy/api/location/${city.woeid}/`)
 
     return {
       city: city,
