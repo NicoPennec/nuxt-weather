@@ -2,7 +2,7 @@
   <section class="row">
 
     <div class="col">
-      <h2>Select Your Cities 🌍</h2>
+      <h2>Select Your City 🌍</h2>
       <ul class="cities">
         <li v-for="city in cities">
           <nuxt-link :to="'/weather/' + city.code">{{ city.label }}</nuxt-link>
@@ -21,7 +21,7 @@
   export default {
     asyncData ({ env }) {
       return {
-        cities: env.cities.map((city) => {
+        cities: env.CITIES.map((city) => {
           return {
             code: city.toLowerCase(),
             label: city
@@ -32,10 +32,9 @@
     head: {
       title: 'Weather',
       meta: [
-        { hid: 'description', name: 'description', content: 'Weather page description' }
+        { hid: 'description', name: 'description', content: 'Weather of your city' }
       ]
     }
-
   }
 </script>
 
@@ -49,6 +48,5 @@
   .row > .col {
     flex: 1 1 auto;
   }
-
 </style>
 

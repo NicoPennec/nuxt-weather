@@ -56,6 +56,7 @@ html
   padding: 5px 20px;
 }
 .button--green:hover,
+.button--green.nuxt-link-active:not(:first-child),
 nav .router-link-exact-active
 {
   color: #fff;

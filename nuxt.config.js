@@ -7,11 +7,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    titleTemplate: '%s - Nuxt Weather',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'Nuxt Weather, just yet another Nuxt.js project' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -42,7 +42,9 @@ module.exports = {
   },
   plugins: ['~plugins/filters'],
   env: {
-    cities: [
+    API: '/proxy',
+    // API: 'https://www.metaweather.com',
+    CITIES: [
       'Ajaccio',
       'Bordeaux',
       'Lille',

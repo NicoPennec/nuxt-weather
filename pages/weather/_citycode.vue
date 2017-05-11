@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>{{ city.title }} 5-Day Forecast</h2>
+    <h2>{{ city.title }} 6-Day Forecast</h2>
     <table class="forecast">
       <tbody>
         <tr v-for="w in weather">
@@ -18,15 +18,20 @@
 import axios from 'axios'
 
 export default {
+  head: {
+    title: 'Forecast of {{ city.title }}'
+  },
   async asyncData ({ params, env, error }) {
-    const citycode = env.cities.find((city) => city.toLowerCase() === params.citycode)
+    const citycode = env.CITIES.find((city) => city.toLowerCase() === params.citycode)
     if (!citycode) {
       return error({ message: 'City not found', statusCode: 404 })
     }
 
-    let { data } = await axios.get(`/proxy/api/location/search/?query=${params.citycode}`)
+    axios.defaults.baseURL = env.API
+
+    let { data } = await axios.get(`/api/location/search/?query=${params.citycode}`)
     let city = data[0]
-    let { data: weather } = await axios.get(`/proxy/api/location/${city.woeid}/`)
+    let { data: weather } = await axios.get(`/api/location/${city.woeid}/`)
 
     return {
       city: city,
