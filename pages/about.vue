@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac eros varius, egestas erat id, consectetur lectus. Donec ac molestie nisi. Sed ac ligula a dolor posuere mollis.</p>
+    <p>This web site is only a POC for <abbr title="Server-Side Rendering">SSR</abbr> with Nuxtjs.</p>
+    <p>Made with love by <a href="http://pennec.io">NicoPennec</a> 🤓</p>
   </section>
 </template>

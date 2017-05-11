@@ -6,3 +6,9 @@ Vue.filter('formatDate', function (value, pattern) {
     return format(parse(value), pattern)
   }
 })
+
+Vue.filter('round', function (value) {
+  if (value) {
+    return Math.round(value)
+  }
+})

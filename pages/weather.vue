@@ -1,16 +1,18 @@
 <template>
-  <section class="container">
+  <section class="row">
 
-    <h2><nuxt-link to="/weather/">Cities</nuxt-link></h2>
+    <div class="col">
+      <h2>Select Your Cities 🌍</h2>
+      <ul class="cities">
+        <li v-for="city in cities">
+          <nuxt-link :to="'/weather/' + city.code">{{ city.label }}</nuxt-link>
+        </li>
+      </ul>
+    </div>
 
-    <ul class="cities">
-      <li v-for="city in cities">
-        <!--<nuxt-link :to="`/weather/${city | lowercase}`">{{ city }}</nuxt-link>-->
-        <nuxt-link :to="'/weather/' + city.code">{{ city.label }}</nuxt-link>
-      </li>
-    </ul>
-
-    <nuxt-child/>
+    <div class="col">
+      <nuxt-child/>
+    </div>
 
   </section>
 </template>
@@ -38,15 +40,16 @@
   }
 </script>
 
-<style>
-  .container {
-    /*
-    min-height: 100vh;
+<style scoped>
+  .row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    */
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
+
+  .row > .col {
+    flex: 1 1 auto;
+  }
+
 </style>
 

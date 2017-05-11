@@ -1,5 +1,8 @@
 module.exports = {
   cache: true,
+  router: {
+    middleware: 'check-renderer'
+  },
   /*
   ** Headers of the page
   */

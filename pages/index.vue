@@ -1,16 +1,16 @@
 <template>
   <section>
-    <h2>Home Sweet Home!</h2>
-    <div class="renderer">Renderer => {{ renderer }}</div>
+    <h2>Check My State 💥</h2>
+    <pre>state = {{ $store.state }}</pre>
   </section>
 </template>
 
 <script>
+  import Renderer from '~components/Renderer'
+
   export default {
-    asyncData ({ isServer }) {
-      return {
-        renderer: isServer ? 'Server' : 'Client'
-      }
+    components: {
+      Renderer
     }
   }
 </script>

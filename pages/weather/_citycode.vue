@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <h2>{{ city.title }}</h2>
+    <h2>{{ city.title }} 5-Day Forecast</h2>
     <table class="forecast">
       <tbody>
         <tr v-for="w in weather">
           <td>{{ w.applicable_date | formatDate('dddd') }}</td>
           <td>{{ w.weather_state_name }}</td>
           <td><img class="icon" :src="'/img/weather/' + w.weather_state_abbr + '.svg'"></td>
+          <td>{{ w.the_temp | round }}°</td>
         </tr>
       </tbody>
     </table>
-    <!--<pre>{{ weather }}</pre>-->
   </div>
 </template>
 
@@ -18,27 +18,19 @@
 import axios from 'axios'
 
 export default {
-  /*
-  validate ({ params }) {
-    console.log(params)
-    return true
-    // return !isNaN(+params.id)
-  },
-  */
   async asyncData ({ params, env, error }) {
     const citycode = env.cities.find((city) => city.toLowerCase() === params.citycode)
     if (!citycode) {
       return error({ message: 'City not found', statusCode: 404 })
     }
 
-    // let { data: city } = await axios.get(`https://www.metaweather.com/api/location/search/?query=${params.citycode}`)
     let { data } = await axios.get(`https://www.metaweather.com/api/location/search/?query=${params.citycode}`)
     let city = data[0]
-    let weather = await axios.get(`https://www.metaweather.com/api/location/${city.woeid}`)
+    let { data: weather } = await axios.get(`https://www.metaweather.com/api/location/${city.woeid}/`)
 
     return {
       city: city,
-      weather: weather.data.consolidated_weather
+      weather: weather.consolidated_weather
     }
   }
 }
@@ -49,9 +41,16 @@ export default {
   width: 32px;
 }
 .forecast {
-  min-width: 400px;
+  width: 100%;
+  border-collapse: collapse;
 }
-.forecast tr + tr td {
-  border-top: 1px dotted #ccc;
+.forecast tr:nth-child(odd) {
+  background: #eee;
+}
+.forecast tr:last-child td {
+  border-bottom: 1px solid #eee;
+}
+.forecast td {
+  padding: 1px 5px;
 }
 </style>

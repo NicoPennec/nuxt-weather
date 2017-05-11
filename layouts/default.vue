@@ -1,11 +1,16 @@
 <template>
-  <div>
+  <div class="app">
+    <renderer :ssr="$store.state.ssr"/>
     <header>
-      <h1>Nuxt Weather <img src="/img/weather/lc.svg" style="width: 32px"></h1>
+      <h1>
+        <img src="/img/weather/lc.svg" style="width: 32px; margin-right: 10px;">
+        Nuxt Weather
+      </h1>
     </header>
     <navigation/>
-    <nuxt/>
-    <hr>
+    <section class="main">
+      <nuxt/>
+    </section>
     <footer>
       Powered by <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a> & <a href="https://www.metaweather.com" target="_blank" >MetaWeather</a>
     </footer>
@@ -14,10 +19,12 @@
 
 <script>
   import Navigation from '~components/Navigation.vue'
+  import Renderer from '~components/Renderer'
 
   export default {
     components: {
-      Navigation
+      Navigation,
+      Renderer
     }
   }
 </script>
@@ -46,9 +53,10 @@ html
   border: 1px solid #3b8070;
   color: #3b8070;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 5px 20px;
 }
-.button--green:hover
+.button--green:hover,
+nav .router-link-exact-active
 {
   color: #fff;
   background-color: #3b8070;
@@ -60,12 +68,47 @@ html
   border: 1px solid #35495e;
   color: #35495e;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 5px 20px;
   margin-left: 15px;
 }
 .button--grey:hover
 {
   color: #fff;
   background-color: #35495e;
+}
+
+.app {
+  max-width: 768px;
+  margin: 10px auto;
+}
+
+header h1 {
+  margin: 20px 0;
+  letter-spacing: -2.5px;
+  text-shadow: 0 0 1px #c88c32;
+}
+
+nav {
+  display: block;
+  margin: 20px 0;
+}
+
+nav a + a {
+  margin-left: 10px;
+}
+
+pre {
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+footer {
+  border-top: 1px dotted #ccc;
+  margin: 50px 0 20px;
 }
 </style>
