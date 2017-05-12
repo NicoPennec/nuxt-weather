@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>{{ city.title }} 6-Day Forecast</h2>
+    <h2>{{ city.title }} 6-Day Weather Forecast</h2>
     <table class="forecast">
       <tbody>
         <tr v-for="w in weather">
@@ -18,8 +18,10 @@
 import axios from 'axios'
 
 export default {
-  head: {
-    title: 'Forecast of {{ city.title }}'
+  head () {
+    return {
+      title: `Forecast of ${this.city.title}`
+    }
   },
   async asyncData ({ params, env, error, store }) {
     const citycode = env.CITIES.find((city) => city.toLowerCase() === params.citycode)
@@ -28,7 +30,6 @@ export default {
     }
 
     store.commit('SET_CITY', citycode)
-    // this.$store.commit('SET_CITY', citycode)
 
     axios.defaults.baseURL = env.API
 
