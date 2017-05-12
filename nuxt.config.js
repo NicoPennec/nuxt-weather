@@ -42,8 +42,8 @@ module.exports = {
   },
   plugins: ['~plugins/filters'],
   env: {
-    API: '/proxy',
-    // API: 'https://www.metaweather.com',
+    // API: '/proxy',
+    API: 'https://www.metaweather.com',
     CITIES: [
       'Ajaccio',
       'Bordeaux',
