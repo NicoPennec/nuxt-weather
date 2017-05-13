@@ -21,12 +21,10 @@
   export default {
     asyncData ({ env }) {
       return {
-        cities: env.CITIES.map((city) => {
-          return {
-            code: city.toLowerCase(),
-            label: city
-          }
-        })
+        cities: env.CITIES.map((city) => ({
+          code: city.toLowerCase(),
+          label: city
+        }))
       }
     },
     head: {

@@ -23,7 +23,7 @@ export default {
       title: `Forecast of ${this.city.title}`
     }
   },
-  async asyncData ({ params, env, error, store }) {
+  async asyncData ({ env, error, isDev, params, store }) {
     const citycode = env.CITIES.find((city) => city.toLowerCase() === params.citycode)
     if (!citycode) {
       return error({ message: 'City not found', statusCode: 404 })
@@ -31,7 +31,7 @@ export default {
 
     store.commit('SET_CITY', citycode)
 
-    axios.defaults.baseURL = env.API
+    axios.defaults.baseURL = isDev ? env.DEV_API : env.PROD_API
 
     let { data } = await axios.get(`/api/location/search/?query=${params.citycode}`)
     let city = data[0]
