@@ -3,9 +3,6 @@ module.exports = {
   router: {
     middleware: 'check-renderer'
   },
-  /*
-  ** Headers of the page
-  */
   head: {
     titleTemplate: '%s - Nuxt Weather',
     meta: [
@@ -25,7 +22,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios'],
+    vendor: ['axios', 'babel-polyfill'],
     /*
     ** Run ESLINT on save
     */
