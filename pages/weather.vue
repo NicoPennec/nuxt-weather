@@ -36,15 +36,15 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
 
-  .row > .col {
+    .col {
     flex: 1 1 auto;
+    }
   }
 </style>
 
