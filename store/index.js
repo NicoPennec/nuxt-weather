@@ -4,10 +4,20 @@ export const plugins = [persistedstate({
   key: 'nuxtweather'
 })]
 
-export const state = {
+export const state = () => ({
   ssr: null,
-  city: null
-}
+  city: null,
+  cities: [
+    'Ajaccio',
+    'Bordeaux',
+    'Lille',
+    'Lyon',
+    'Marseille',
+    'Nice',
+    'Paris',
+    'Toulouse'
+  ]
+})
 
 export const mutations = {
   SET_RENDERER (state, value) {

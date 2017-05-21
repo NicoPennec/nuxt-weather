@@ -22,7 +22,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'babel-polyfill'],
+    // analyze: true,
     vendor: ['axios', 'babel-polyfill', 'vuex-persistedstate'],
     /*
     ** Run ESLINT on save
@@ -38,19 +38,11 @@ module.exports = {
       }
     }
   },
-  plugins: ['~plugins/filters'],
+  plugins: [
+    '~plugins/filters'
+  ],
   env: {
     DEV_API: 'https://www.metaweather.com',
-    PROD_API: '/proxy',
-    CITIES: [
-      'Ajaccio',
-      'Bordeaux',
-      'Lille',
-      'Lyon',
-      'Marseille',
-      'Nice',
-      'Paris',
-      'Toulouse'
-    ]
+    PROD_API: '/proxy'
   }
 }

@@ -24,16 +24,16 @@ export default {
     }
   },
   async asyncData ({ env, error, isDev, params, store }) {
-    const citycode = env.CITIES.find((city) => city.toLowerCase() === params.citycode)
+    const citycode = store.state.cities.find((city) => city.toLowerCase() === params.citycode)
     if (!citycode) {
       return error({ message: 'City not found', statusCode: 404 })
     }
 
-    store.commit('SET_CITY', citycode)
+    store.commit('SET_CITY', citycode.toLowerCase())
 
     axios.defaults.baseURL = isDev ? env.DEV_API : env.PROD_API
 
-    let { data } = await axios.get(`/api/location/search/?query=${params.citycode}`)
+    let { data } = await axios.get(`/api/location/search/?query=${citycode}`)
     let city = data[0]
     let { data: weather } = await axios.get(`/api/location/${city.woeid}/`)
 

@@ -19,9 +19,9 @@
 
 <script>
   export default {
-    asyncData ({ env }) {
+    asyncData ({ store }) {
       return {
-        cities: env.CITIES.map((city) => ({
+        cities: store.state.cities.map((city) => ({
           code: city.toLowerCase(),
           label: city
         }))
@@ -43,7 +43,7 @@
     justify-content: space-around;
 
     .col {
-    flex: 1 1 auto;
+      flex: 1 1 auto;
     }
   }
 </style>
