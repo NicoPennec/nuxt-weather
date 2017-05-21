@@ -57,7 +57,7 @@ html
 }
 .button--green:hover,
 .button--green.nuxt-link-active:not(:first-child),
-nav .router-link-exact-active
+nav .nuxt-link-exact-active
 {
   color: #fff;
   background-color: #3b8070;
