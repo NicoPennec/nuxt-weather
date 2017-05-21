@@ -8,7 +8,8 @@
     "axios": "^0.16.1",
     "babel-polyfill": "^6.23.0",
     "date-fns": "^1.28.4",
-    "nuxt": "latest"
+    "nuxt": "latest",
+    "vuex-persistedstate": "^1.4.1"
   },
   "scripts": {
     "dev": "nuxt",

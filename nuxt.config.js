@@ -23,6 +23,7 @@ module.exports = {
   */
   build: {
     vendor: ['axios', 'babel-polyfill'],
+    vendor: ['axios', 'babel-polyfill', 'vuex-persistedstate'],
     /*
     ** Run ESLINT on save
     */

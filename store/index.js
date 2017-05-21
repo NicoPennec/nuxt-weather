@@ -1,3 +1,9 @@
+import persistedstate from 'vuex-persistedstate'
+
+export const plugins = [persistedstate({
+  key: 'nuxtweather'
+})]
+
 export const state = {
   ssr: null,
   city: null
