@@ -8,19 +8,20 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'application-name', content: 'MetaWeather' },
+      { name: 'apple-mobile-web-app-title', content: 'MetaWeather' },
       { hid: 'description', name: 'description', content: 'Nuxt Weather, just yet another Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', sizes: '192x192', href: '/icon/icon-192.png' },
+      { rel: 'apple-touch-icon', href: '/icon/icon-152.png' },
+      //{ rel: 'manifest', href: '/manifest.json' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
   build: {
     // analyze: true,
     vendor: ['axios', 'babel-polyfill', 'vuex-persistedstate'],
