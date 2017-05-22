@@ -6,7 +6,7 @@
         <tr v-for="w in weather">
           <td>{{ w.applicable_date | formatDate('dddd') }}</td>
           <td>{{ w.weather_state_name }}</td>
-          <td><img class="icon" :src="'/img/weather/' + w.weather_state_abbr + '.svg'"></td>
+          <td><img class="icon" :src="`/img/weather/${w.weather_state_abbr}.svg`" :alt="w.weather_state_name"></td>
           <td>{{ w.the_temp | round }}°</td>
         </tr>
       </tbody>

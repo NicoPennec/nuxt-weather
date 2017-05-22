@@ -3,7 +3,7 @@
     <renderer :ssr="$store.state.ssr"/>
     <header>
       <h1>
-        <img src="/img/weather/lc.svg" style="width: 32px; margin-right: 10px;">
+        <img src="/img/weather/lc.svg" alt="Logo Nuxt Weather" style="width: 32px; margin-right: 10px;">
         Nuxt Weather
       </h1>
     </header>
