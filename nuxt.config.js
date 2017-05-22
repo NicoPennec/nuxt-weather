@@ -22,7 +22,7 @@ module.exports = {
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'icon', sizes: '192x192', href: '/icon/icon-192.png' },
       { rel: 'apple-touch-icon', href: '/icon/icon-152.png' },
-      //{ rel: 'manifest', href: '/manifest.json' }
+      { rel: 'manifest', href: '/manifest.json' }
     ]
   },
   loading: { color: '#3B8070' },
