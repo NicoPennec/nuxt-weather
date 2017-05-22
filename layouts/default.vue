@@ -12,7 +12,7 @@
       <nuxt/>
     </section>
     <footer>
-      Powered by <a href="https://nuxtjs.org" target="_blank">Nuxt.js</a> & <a href="https://www.metaweather.com" target="_blank" >MetaWeather</a>
+      Powered by <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a> & <a href="https://www.metaweather.com" target="_blank" rel="noopener">MetaWeather</a>
     </footer>
   </div>
 </template>
