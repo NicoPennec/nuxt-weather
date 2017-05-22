@@ -5,13 +5,17 @@ module.exports = {
   },
   head: {
     titleTemplate: '%s - Nuxt Weather',
+    htmlAttrs: {
+      lang: 'en'
+    },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'application-name', content: 'MetaWeather' },
       { name: 'apple-mobile-web-app-title', content: 'MetaWeather' },
+      { name: 'theme-color', content: '#000000' },
       { hid: 'description', name: 'description', content: 'Nuxt Weather, just yet another Nuxt.js project' }
     ],
     link: [
