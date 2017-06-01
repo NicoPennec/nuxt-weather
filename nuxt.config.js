@@ -1,4 +1,5 @@
 module.exports = {
+  offline: true,
   cache: true,
   router: {
     middleware: 'check-renderer'
@@ -44,7 +45,8 @@ module.exports = {
     }
   },
   plugins: [
-    '~plugins/filters'
+    '~plugins/filters',
+    { src: '~plugins/offline.js', ssr: false }
   ],
   env: {
     DEV_API: 'https://www.metaweather.com',
