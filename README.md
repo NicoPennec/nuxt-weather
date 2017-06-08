@@ -1,6 +1,8 @@
-# test-nuxt
+[![Build Status](https://travis-ci.org/NicoPennec/nuxt-weather.svg?branch=master)](https://travis-ci.org/NicoPennec/nuxt-weather)
 
-> Nuxt.js project
+# Nuxt Weather
+
+> Nuxt Weather, just yet another Nuxt.js project
 
 ## Build Setup
 
@@ -16,7 +18,7 @@ $ npm run build
 $ npm start
 
 # generate static project
-$ npm run generate
+$ npm run generate (not yet)
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
