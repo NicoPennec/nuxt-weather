@@ -27,6 +27,22 @@ module.exports = {
     ]
   },
   loading: { color: '#3B8070' },
+  modules: ['@nuxtjs/sitemap'],
+  sitemap: {
+    routes () {
+      let cities = [
+        'Ajaccio',
+        'Bordeaux',
+        'Lille',
+        'Lyon',
+        'Marseille',
+        'Nice',
+        'Paris',
+        'Toulouse'
+      ]
+      return cities.map(city => `/weather/${city.toLowerCase()}`)
+    }
+  },
   build: {
     // analyze: true,
     vendor: ['axios', 'babel-polyfill', 'vuex-persistedstate'],
