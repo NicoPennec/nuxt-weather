@@ -18,8 +18,8 @@
 </template>
 
 <script>
-  import Navigation from '~components/Navigation.vue'
-  import Renderer from '~components/Renderer'
+  import Navigation from '@/components/Navigation.vue'
+  import Renderer from '@/components/Renderer'
 
   export default {
     components: {

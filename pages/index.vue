@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Renderer from '~components/Renderer'
+  import Renderer from '@/components/Renderer'
 
   export default {
     components: {
