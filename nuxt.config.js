@@ -61,8 +61,7 @@ module.exports = {
     }
   },
   plugins: [
-    '~plugins/filters',
-    { src: '~plugins/offline.js', ssr: false }
+    '~plugins/filters'
   ],
   env: {
     DEV_API: 'https://www.metaweather.com',
