@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@nuxtjs/sitemap@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-0.0.2.tgz#bdba91bffab02a3cc7c18ad65a7585243cefd4b6"
+"@nuxtjs/sitemap@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-0.0.3.tgz#41f5a4ab4775414cebb521ac6bdf16f6edcf2650"
   dependencies:
     async-cache "^1.1.0"
     fs-extra "^4.0.0"

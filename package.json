@@ -5,7 +5,7 @@
   "author": "NicoPennec <nemohp@yahoo.fr>",
   "private": true,
   "dependencies": {
-    "@nuxtjs/sitemap": "^0.0.2",
+    "@nuxtjs/sitemap": "^0.0.3",
     "axios": "^0.16.1",
     "babel-polyfill": "^6.23.0",
     "chart.js": "^2.5.0",
