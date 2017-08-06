@@ -1,3 +1,5 @@
+const cities = require('./api/cities.json')
+
 module.exports = {
   offline: true,
   cache: true,
@@ -30,16 +32,6 @@ module.exports = {
   modules: ['@nuxtjs/sitemap'],
   sitemap: {
     routes () {
-      let cities = [
-        'Ajaccio',
-        'Bordeaux',
-        'Lille',
-        'Lyon',
-        'Marseille',
-        'Nice',
-        'Paris',
-        'Toulouse'
-      ]
       return cities.map(city => `/weather/${city.toLowerCase()}`)
     }
   },

@@ -1,4 +1,5 @@
 import persistedstate from 'vuex-persistedstate'
+import cities from '@/api/cities.json'
 
 export const plugins = [persistedstate({
   key: 'nuxtweather'
@@ -7,16 +8,7 @@ export const plugins = [persistedstate({
 export const state = () => ({
   ssr: null,
   city: null,
-  cities: [
-    'Ajaccio',
-    'Bordeaux',
-    'Lille',
-    'Lyon',
-    'Marseille',
-    'Nice',
-    'Paris',
-    'Toulouse'
-  ]
+  cities: cities
 })
 
 export const mutations = {
