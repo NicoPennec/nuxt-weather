@@ -1,8 +1,12 @@
 [![Build Status](https://travis-ci.org/NicoPennec/nuxt-weather.svg?branch=master)](https://travis-ci.org/NicoPennec/nuxt-weather)
 
-# Nuxt Weather
+# Nuxt Weather 🌤
 
-> Nuxt Weather, just yet another Nuxt.js project
+Nuxt Weather, just yet another Nuxt.js project!
+
+👉 Live Demo: http://vps343202.ovh.net
+
+[![Nuxt Weather](https://user-images.githubusercontent.com/493223/29147217-04fd2016-7d66-11e7-9143-85208d7c91a0.png)](http://vps343202.ovh.net)
 
 ## Build Setup
 
