@@ -10,7 +10,7 @@
     "babel-polyfill": "^6.23.0",
     "chart.js": "^2.5.0",
     "date-fns": "^1.28.4",
-    "nuxt": "^1.0.0-rc4",
+    "nuxt": "^1.0.0-rc6",
     "vuex-persistedstate": "^1.4.1"
   },
   "scripts": {
