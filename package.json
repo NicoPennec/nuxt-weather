@@ -13,7 +13,8 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "nuxt": "^1.0.0-rc11",
-    "vuex-persistedstate": "^1.4.1"
+    "vuex-persistedstate": "^1.4.1",
+    "snyk": "^1.52.1"
   },
   "scripts": {
     "dev": "nuxt",
@@ -22,7 +23,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -36,5 +39,6 @@
     "node-sass": "^4.5.3",
     "prettier": "^1.6.1",
     "sass-loader": "^6.0.6"
-  }
+  },
+  "snyk": true
 }
