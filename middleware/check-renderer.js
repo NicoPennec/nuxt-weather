@@ -1,6 +1,6 @@
-export default function ({ store, isServer }) {
-  if (store.state.ssr === isServer) {
+export default function ({ store }) {
+  if (store.state.ssr === process.server) {
     return
   }
-  store.commit('SET_RENDERER', isServer)
+  store.commit('SET_RENDERER', process.server)
 }
