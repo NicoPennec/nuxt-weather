@@ -4,6 +4,10 @@
   "description": "Nuxt Weather, just yet another Nuxt.js project",
   "author": "NicoPennec <nemohp@yahoo.fr>",
   "private": true,
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
