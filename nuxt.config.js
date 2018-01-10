@@ -53,7 +53,8 @@ module.exports = {
     }
   },
   plugins: [
-    '~plugins/filters'
+    '~plugins/filters',
+    { src: '~plugins/persistedstate.js', ssr: false }
   ],
   env: {
     DEV_API: 'https://www.metaweather.com',

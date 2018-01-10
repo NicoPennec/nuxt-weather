@@ -1,13 +1,4 @@
-import createPersistedState from 'vuex-persistedstate'
 import cities from '@/api/cities.json'
-
-export const plugins = []
-
-if (process.client) {
-  plugins.push(createPersistedState({
-    key: 'nuxtweather'
-  }))
-}
 
 export const state = () => ({
   ssr: null,
