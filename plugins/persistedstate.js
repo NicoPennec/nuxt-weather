@@ -5,7 +5,8 @@ export default ({store, isHMR}) => {
 
   window.onNuxtReady(() => {
     createPersistedState({
-      key: 'nuxtweather'
+      key: 'nuxtweather',
+      paths: ['city', 'cities']
     })(store)
   })
 }
