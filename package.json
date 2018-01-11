@@ -15,7 +15,9 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^0.0.3",
@@ -24,7 +26,8 @@
     "chart.js": "^2.7.1",
     "date-fns": "^1.29.0",
     "nuxt": "^1.0.0",
-    "vuex-persistedstate": "^2.4.2"
+    "vuex-persistedstate": "^2.4.2",
+    "snyk": "^1.68.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -40,5 +43,6 @@
     "node-sass": "^4.7.2",
     "prettier": "^1.9.2",
     "sass-loader": "^6.0.6"
-  }
+  },
+  "snyk": true
 }
