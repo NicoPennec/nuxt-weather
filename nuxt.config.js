@@ -1,8 +1,6 @@
 const cities = require('./api/cities.json')
 
 module.exports = {
-  offline: true,
-  cache: true,
   router: {
     middleware: 'check-renderer'
   },
@@ -38,9 +36,6 @@ module.exports = {
   build: {
     // analyze: true,
     vendor: ['axios', 'babel-polyfill', 'vuex-persistedstate'],
-    /*
-    ** Run ESLINT on save
-    */
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
