@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^0.0.3",
-    "axios": "^0.17.1",
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.1",
     "date-fns": "^1.29.0",
@@ -27,18 +27,18 @@
     "vuex-persistedstate": "^2.4.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.18.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-loader": "^1.9.0",
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.2",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "json-loader": "^0.5.7",
     "node-sass": "^4.7.2",
-    "prettier": "^1.9.2",
+    "prettier": "^1.11.1",
     "sass-loader": "^6.0.6"
   }
 }
