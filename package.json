@@ -19,7 +19,7 @@
     "analyze": "npm run build --analyze"
   },
   "dependencies": {
-    "@nuxtjs/sitemap": "^0.0.5",
+    "@nuxtjs/sitemap": "^0.1.0",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.2",

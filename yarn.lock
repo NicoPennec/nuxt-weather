@@ -78,16 +78,15 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@nuxtjs/sitemap@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-0.0.5.tgz#6b193494ac059f584eedbff30f52eab59aaf6852"
+"@nuxtjs/sitemap@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-0.1.0.tgz#263f58dbe651bb17cbd627482eaa91bfe0513f1f"
   dependencies:
     async-cache "^1.1.0"
     fs-extra "^5.0.0"
     is-https "^1.0.0"
     lodash "^4.17.5"
     minimatch "^3.0.4"
-    pify "^3.0.0"
     sitemap "^1.13.0"
 
 "@nuxtjs/youch@^4.2.3":
