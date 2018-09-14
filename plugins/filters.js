@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {parse, format} from 'date-fns'
+import { parse, format } from 'date-fns'
 
 Vue.filter('formatDate', function (value, pattern) {
   if (value) {
