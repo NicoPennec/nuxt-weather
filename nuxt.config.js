@@ -1,5 +1,7 @@
 const cities = require('./api/cities.json')
 
+process.env.WEATHER_API = process.env.WEATHER_API || 'https://www.metaweather.com/'
+
 module.exports = {
   router: {
     middleware: 'check-renderer'
@@ -27,7 +29,16 @@ module.exports = {
     ]
   },
   loading: { color: '#3B8070' },
-  modules: ['@nuxtjs/sitemap'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap'
+  ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api': process.env.WEATHER_API
+  },
   sitemap: {
     routes () {
       return cities.map(city => `/weather/${city.toLowerCase()}`)
@@ -50,9 +61,5 @@ module.exports = {
   plugins: [
     '~plugins/filters',
     { src: '~plugins/persistedstate.js', ssr: false }
-  ],
-  env: {
-    DEV_API: 'https://www.metaweather.com',
-    PROD_API: '/proxy'
-  }
+  ]
 }

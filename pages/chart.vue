@@ -6,14 +6,11 @@
 </template>
 
 <script>
-
-import axios from 'axios'
-
 export default {
   head: {
     title: 'Chart'
   },
-  async asyncData ({ env, error, isDev, params, store }) {
+  async asyncData ({ app, error, params, store }) {
     if (!store.state.city) {
       store.state.city = store.state.cities[0]
     }
@@ -22,11 +19,9 @@ export default {
 
     store.commit('SET_CITY', citycode)
 
-    axios.defaults.baseURL = isDev ? env.DEV_API : env.PROD_API
-
-    let { data } = await axios.get(`/api/location/search/?query=${citycode}`)
-    let city = data[0]
-    let { data: weather } = await axios.get(`/api/location/${city.woeid}/`)
+    const cities = await app.$axios.$get(`/api/location/search/?query=${citycode}`)
+    const city = cities[0]
+    const weather = await app.$axios.$get(`/api/location/${city.woeid}/`)
 
     return {
       city: city,
@@ -34,10 +29,10 @@ export default {
     }
   },
   async mounted () {
-    let ctx = document.getElementById('chart')
+    const ctx = document.getElementById('chart')
 
-    let labels = this.weather.map(w => this.$options.filters.formatDate(w.applicable_date, 'dddd'))
-    let data = this.weather.map(w => w.the_temp)
+    const labels = this.weather.map(w => this.$options.filters.formatDate(w.applicable_date, 'dddd'))
+    const data = this.weather.map(w => w.the_temp)
 
     const Chart = await import(/* webpackChunkName: "chart" */ 'chart.js')
 

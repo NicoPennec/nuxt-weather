@@ -3,7 +3,7 @@
     <h2>{{ city.title }} 6-Day Weather Forecast</h2>
     <table class="forecast">
       <tbody>
-        <tr v-for="w in weather">
+        <tr v-for="w in weather" :key="w.id">
           <td>{{ w.applicable_date | formatDate('dddd') }}</td>
           <td>{{ w.weather_state_name }}</td>
           <td><img class="icon" :src="`/img/weather/${w.weather_state_abbr}.svg`" :alt="w.weather_state_name"></td>
@@ -15,15 +15,13 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   head () {
     return {
       title: `Forecast of ${this.city.title}`
     }
   },
-  async asyncData ({ env, error, isDev, params, store }) {
+  async asyncData ({ app, error, params, store }) {
     const citycode = store.state.cities.find((city) => city.toLowerCase() === params.citycode)
     if (!citycode) {
       return error({ message: 'City not found', statusCode: 404 })
@@ -31,11 +29,9 @@ export default {
 
     store.commit('SET_CITY', citycode.toLowerCase())
 
-    axios.defaults.baseURL = isDev ? env.DEV_API : env.PROD_API
-
-    let { data } = await axios.get(`/api/location/search/?query=${citycode}`)
-    let city = data[0]
-    let { data: weather } = await axios.get(`/api/location/${city.woeid}/`)
+    const cities = await app.$axios.$get(`/api/location/search/?query=${citycode}`)
+    const city = cities[0]
+    const weather = await app.$axios.$get(`/api/location/${city.woeid}/`)
 
     return {
       city: city,
