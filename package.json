@@ -6,7 +6,8 @@
   "private": true,
   "engines": {
     "node": ">=8",
-    "npm": ">=5"
+    "npm": ">=5",
+    "yarn": ">=1"
   },
   "scripts": {
     "dev": "nuxt",
@@ -24,7 +25,7 @@
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.7.2",
     "date-fns": "^1.29.0",
-    "nuxt": "^1.4.2",
+    "nuxt": "^2.0.0",
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {

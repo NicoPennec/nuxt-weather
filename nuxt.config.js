@@ -35,7 +35,6 @@ module.exports = {
   },
   build: {
     // analyze: true,
-    vendor: ['axios', 'babel-polyfill', 'vuex-persistedstate'],
     maxChunkSize: 300000,
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
