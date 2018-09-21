@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/NicoPennec/nuxt-weather.svg?branch=master)](https://travis-ci.org/NicoPennec/nuxt-weather)
+[![Dependencies](https://david-dm.org/NicoPennec/nuxt-weather/status.svg?style=flat-square)](https://david-dm.org/NicoPennec/nuxt-weather)
 
 # Nuxt Weather 🌤
 
