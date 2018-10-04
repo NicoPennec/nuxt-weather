@@ -1,8 +1,13 @@
+const shrinkRay = require('shrink-ray-current')
+
 const cities = require('./api/cities.json')
 
 process.env.WEATHER_API = process.env.WEATHER_API || 'https://www.metaweather.com/'
 
 module.exports = {
+  render: {
+    compressor: shrinkRay() // brotli compression
+  },
   router: {
     middleware: 'check-renderer'
   },

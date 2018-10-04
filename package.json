@@ -26,6 +26,7 @@
     "chart.js": "^2.7.2",
     "date-fns": "^1.29.0",
     "nuxt": "^2.0.0",
+    "shrink-ray-current": "^2.1.2",
     "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
