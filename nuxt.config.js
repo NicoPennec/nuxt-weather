@@ -6,6 +6,9 @@ process.env.WEATHER_API = process.env.WEATHER_API || 'https://www.metaweather.co
 
 module.exports = {
   render: {
+    http2: {
+      push: true
+    },
     compressor: shrinkRay() // brotli compression
   },
   router: {
