@@ -48,6 +48,8 @@ module.exports = {
     '/api': process.env.WEATHER_API
   },
   sitemap: {
+    gzip: true,
+    hostname: 'https://nuxt-weather.pennec.io',
     routes () {
       return cities.map(city => `/weather/${city.toLowerCase()}`)
     }
