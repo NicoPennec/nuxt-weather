@@ -31,6 +31,18 @@
       title: 'Weather',
       meta: [
         { hid: 'description', name: 'description', content: 'Weather of your city' }
+      ],
+      link: [
+        { rel: 'prefetch', href: '/img/weather/c.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/h.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/hc.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/hr.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/lc.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/lr.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/s.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/sl.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/sn.svg', as: 'image' },
+        { rel: 'prefetch', href: '/img/weather/t.svg', as: 'image' }
       ]
     }
   }
