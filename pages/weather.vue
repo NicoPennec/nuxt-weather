@@ -4,7 +4,7 @@
     <div class="col">
       <h2>Select Your City 🌍</h2>
       <ul class="cities">
-        <li v-for="city in cities">
+        <li v-for="(city, index) in cities" :key="index">
           <nuxt-link :to="'/weather/' + city.code">{{ city.label }}</nuxt-link>
         </li>
       </ul>
