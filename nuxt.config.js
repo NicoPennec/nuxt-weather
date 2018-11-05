@@ -56,7 +56,9 @@ module.exports = {
   },
   build: {
     // analyze: true,
-    maxChunkSize: 300000,
+    // profile: true,
+    optimizeCSS: true,
+    parallel: true,
     extend (config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
