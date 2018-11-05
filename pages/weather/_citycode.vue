@@ -24,7 +24,7 @@ export default {
   async asyncData ({ app, error, params, store }) {
     const citycode = store.state.cities.find((city) => city.toLowerCase() === params.citycode)
     if (!citycode) {
-      return error({ message: 'City not found', statusCode: 404 })
+      return error({ customMessage: `City « ${params.citycode} » not found...`, statusCode: 404 })
     }
 
     store.commit('SET_CITY', citycode.toLowerCase())
