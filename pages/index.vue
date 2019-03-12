@@ -6,12 +6,7 @@
 </template>
 
 <script>
-  import Renderer from '@/components/Renderer'
-
   export default {
-    components: {
-      Renderer
-    },
     head: {
       title: 'Home'
     }
