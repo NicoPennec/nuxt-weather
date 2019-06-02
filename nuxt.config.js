@@ -50,9 +50,15 @@ module.exports = {
   sitemap: {
     gzip: true,
     hostname: 'https://nuxt-weather.pennec.io',
-    routes () {
-      return cities.map(city => `/weather/${city.toLowerCase()}`)
-    }
+    routes: cities.map(city => `/weather/${city.toLowerCase()}`),
+    xmlNs: 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
+    filter: ({ routes }) =>
+      routes.map(route => {
+        if (route.url.startsWith('/weather/')) {
+          route.changefreq = 'daily'
+        }
+        return route
+      })
   },
   build: {
     // analyze: true,
