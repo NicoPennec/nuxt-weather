@@ -11,6 +11,7 @@ module.exports = {
     },
     compressor: shrinkRay() // brotli compression
   },
+  modern: true,
   router: {
     middleware: 'check-renderer'
   },
