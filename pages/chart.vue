@@ -31,7 +31,7 @@ export default {
   async mounted () {
     const ctx = document.getElementById('chart')
 
-    const labels = this.weather.map(w => this.$options.filters.formatDate(w.applicable_date, 'dddd'))
+    const labels = this.weather.map(w => this.$options.filters.formatDate(w.applicable_date, 'eeee'))
     const data = this.weather.map(w => w.the_temp.toFixed(1))
 
     const Chart = await import(/* webpackChunkName: "chart" */ 'chart.js')
