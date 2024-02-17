@@ -25,7 +25,7 @@
     "babel-polyfill": "^6.26.0",
     "chart.js": "^2.9.3",
     "date-fns": "^2.8.1",
-    "nuxt": "^2.10.2",
+    "nuxt": "^3.0.0",
     "shrink-ray-current": "^4.1.2",
     "vuex-persistedstate": "^2.7.0"
   },
