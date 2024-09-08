@@ -20,10 +20,10 @@
     "analyze": "npm run build --analyze"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.8.0",
-    "@nuxtjs/sitemap": "^2.0.1",
+    "@nuxtjs/axios": "^5.12.4",
+    "@nuxtjs/sitemap": "^5.0.0",
     "babel-polyfill": "^6.26.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^3.0.0",
     "date-fns": "^2.8.1",
     "nuxt": "^2.10.2",
     "shrink-ray-current": "^4.1.2",
